@@ -35,12 +35,18 @@ body * {
   z-index: 1;
 }
 
+.year {
+  font-size: 200px;
+  opacity: 0.4;
+  z-index: -1;
+}
+
 h1 {
   font-size: 60px;
 }
 
 .container {
-  display: flex;
+  display: none;
   transform: scale(2);
 }
 
@@ -72,5 +78,9 @@ h1 {
 
   .time small {
     font-size: 10px;
+  }
+
+  .year {
+    font-size: 140px;
   }
 }

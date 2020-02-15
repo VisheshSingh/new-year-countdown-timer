@@ -3,10 +3,13 @@ const hours = document.querySelector('.hours');
 const minutes = document.querySelector('.minutes');
 const seconds = document.querySelector('.seconds');
 const container = document.getElementById('container');
+const year = document.getElementById('year');
+const loading = document.getElementById('loading');
 
 const currentYear = new Date().getFullYear();
 
 const newYearTime = new Date(`January 01 ${currentYear + 1} 00:00:00`);
+year.innerHTML = currentYear + 1;
 
 function updateTime() {
   const currentTime = new Date();
@@ -22,5 +25,10 @@ function updateTime() {
 }
 
 updateTime();
+
+setTimeout(() => {
+  loading.remove();
+  container.style.display = 'flex';
+}, 1000);
 
 setInterval(updateTime, 1000);
